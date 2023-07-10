@@ -7,16 +7,17 @@ export default {
     BaseCarousel
   },
   props: {
-    borderdImagesLine: Object
+    borderdImagesLine: Array,
+    mainCarouselImages: Array
   },
 }
 </script>
 
 <template>
   <main>
-    <BaseImagesLine :images="borderdImagesLine.images" :hasBorders="borderdImagesLine.hasBorders" />
+    <BaseImagesLine :images="borderdImagesLine" :hasBorders="false" />
     <section id="main-carousel">
-      <BaseCarousel />
+      <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
     </section>
   </main>
 </template>
