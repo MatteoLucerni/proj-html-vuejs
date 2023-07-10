@@ -43,7 +43,7 @@ export default {
         </div>
       </nav>
     </div>
-    <BaseCarousel :carouselId="'header-carousel'" :images="headerCarouselImages" :hasIndicator="true" />
+    <BaseCarousel :carouselId="'header-carousel'" :images="headerCarouselImages" :hasIndicator="false" />
   </header>
 </template>
 

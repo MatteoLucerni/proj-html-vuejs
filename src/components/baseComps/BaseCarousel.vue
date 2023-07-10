@@ -25,11 +25,12 @@ export default {
       </div>
       <!-- Se è un carosello di stringhe -->
       <div v-else v-for="(string, i) in strings" :key="string.id"
-        class="carousel-item string-item d-flex justify-content-center" :class="{ 'active': i === 0 }">
+        class="carousel-item string-item d-flex flex-column justify-content-center align-items-center"
+        :class="{ 'active': i === 0 }">
         <font-awesome-icon class="string-icon" :icon="['fas', 'quote-left']" />
-        <h2>
+        <h3>
           {{ string.content.toUpperCase() }}
-        </h2>
+        </h3>
         <p class="text-danger">
           {{ string.subContent.toUpperCase() }}
         </p>
@@ -44,7 +45,7 @@ export default {
     <!-- Indicatore -->
     <div v-if="hasIndicator" class="carousel-indicators">
       <button v-for="(e, i) in images || strings" type="button" :data-bs-target="`#${carouselId}`" :data-bs-slide-to="i"
-        :class="{ 'active': i === 0 }" aria-current="true" :aria-label="`Slide ${++i}`"></button>
+        :class="{ 'active': i === 0 }" aria-current="true" :aria-label="`Slide ${i + 1}`"></button>
     </div>
   </div>
 </template>
@@ -95,10 +96,6 @@ button.carousel-control-next {
 // stile per carosello di stringhe
 .string-item {
   height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   .string-icon {
     color: $gold;
@@ -106,7 +103,7 @@ button.carousel-control-next {
     margin-bottom: 30px;
   }
 
-  h2,
+  h3,
   p {
     max-width: 50%;
   }

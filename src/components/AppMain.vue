@@ -15,7 +15,7 @@ export default {
 
 <template>
   <main>
-    <BaseImagesLine :images="borderdImagesLine" :hasBorders="false" />
+    <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" />
     <section id="main-carousel">
       <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
     </section>
