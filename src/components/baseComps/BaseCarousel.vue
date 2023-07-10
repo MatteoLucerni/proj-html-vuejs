@@ -30,6 +30,10 @@
 <style lang="scss" scoped>
 @use '../../assets/sass/vars' as *;
 
+.carousel {
+  overflow-x: hidden;
+}
+
 // reset dello style
 button.carousel-control-prev,
 button.carousel-control-next {

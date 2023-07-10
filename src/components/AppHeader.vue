@@ -2,7 +2,7 @@
 import BaseCarousel from './baseComps/BaseCarousel.vue'
 export default {
   components: {
-    BaseCarousel
+    BaseCarousel,
   }
 }
 </script>
@@ -47,17 +47,29 @@ export default {
 header {
   background-color: black;
   color: white;
-  background-image: url(../assets/img/cielostellato.PNG);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  // taglio la parte alta dello sfondo per rimuovre il simbolo
-  padding: 150px 0;
-  transform: translateY(-150px);
+  // posiziono il background
+  position: relative;
+  padding-bottom: 100px;
+  overflow: hidden;
 
   button {
     background-color: $orange;
   }
+}
+
+// pseudo-elemento per tagliare la parte in alto
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  top: 0;
+  left: 0;
+  background-image: url(../assets/img/cielostellato.PNG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-50px)
 }
 
 ul {
