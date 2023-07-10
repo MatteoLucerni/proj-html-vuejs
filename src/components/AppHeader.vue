@@ -10,7 +10,7 @@ export default {
 <template>
   <header>
     <div class="container">
-      <nav class="navbar">
+      <nav class="navbar mb-5">
         <button class="btn btn-primary">ORDER ONLINE</button>
         <div class="central-item d-flex align-items-center">
           <ul class="left-ul">
@@ -37,13 +37,21 @@ export default {
         </div>
       </nav>
     </div>
+    <BaseCarousel />
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   background-color: black;
   color: white;
+  background-image: url(../assets/img/cielostellato.PNG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // taglio la parte alta dello sfondo per rimuovre il simbolo
+  padding: 50px 0;
+  transform: translateY(-50px);
 }
 
 ul {

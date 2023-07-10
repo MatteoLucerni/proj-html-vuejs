@@ -3,7 +3,51 @@
 </script>
 
 <template>
-  <h1 class="text-success">Carousel</h1>
+  <div class="carousel carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item d-flex justify-content-center active">
+        <img src="../../assets/img/h3-rev-img-2.png" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item d-flex justify-content-center">
+        <img src="../../assets/img/h3-rev-img-4.png" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item d-flex justify-content-center">
+        <img src="../../assets/img/h3-rev-img-6.png" class="d-block" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target=".carousel" data-bs-slide="prev">
+      <span class="carousel-icon-left">PREV</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target=".carousel" data-bs-slide="next">
+      <span class="carousel-icon-right">NEXT</span>
+    </button>
+  </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+// reset dello style
+button.carousel-control-prev,
+button.carousel-control-next {
+  width: unset;
+  opacity: unset;
+}
+
+.carousel-icon-left,
+.carousel-icon-right {
+  border-radius: 50% 50% 0 0;
+  padding: 20px;
+  background-color: #fff;
+  color: red;
+  font-weight: 800;
+}
+
+.carousel-icon-left {
+  rotate: 90deg;
+  margin-left: -25px;
+}
+
+.carousel-icon-right {
+  rotate: -90deg;
+  margin-right: -25px;
+}
+</style>
