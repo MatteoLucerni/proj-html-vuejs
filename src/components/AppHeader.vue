@@ -50,8 +50,8 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   // taglio la parte alta dello sfondo per rimuovre il simbolo
-  padding: 50px 0;
-  transform: translateY(-50px);
+  padding: 150px 0;
+  transform: translateY(-150px);
 }
 
 ul {
