@@ -3,6 +3,12 @@ import BaseCarousel from './baseComps/BaseCarousel.vue'
 export default {
   components: {
     BaseCarousel,
+  },
+  props: {
+    headerCarouselImages: Array
+  },
+  created() {
+    console.log(this.headerCarouselImages)
   }
 }
 </script>
@@ -37,7 +43,7 @@ export default {
         </div>
       </nav>
     </div>
-    <BaseCarousel />
+    <BaseCarousel :images="headerCarouselImages" />
   </header>
 </template>
 
@@ -49,7 +55,7 @@ header {
   color: white;
   // posiziono il background
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
   overflow: hidden;
 
   button {

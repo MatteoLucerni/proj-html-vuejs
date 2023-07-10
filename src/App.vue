@@ -29,14 +29,34 @@ export default {
             url: 'h3-img-4',
           },
         ]
-      }
+      },
+      headerCarouselImages: [
+        {
+          id: 1,
+          desc: 'Crust',
+          bgUrl: 'h3-rev-img-1',
+          frontUrl: 'h3-rev-img-2'
+        },
+        {
+          id: 2,
+          desc: 'Taste',
+          bgUrl: 'h3-rev-img-3',
+          frontUrl: 'h3-rev-img-4'
+        },
+        {
+          id: 3,
+          desc: 'Urban',
+          bgUrl: 'h3-rev-img-5',
+          frontUrl: 'h3-rev-img-6'
+        },
+      ]
     }
   }
 }
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :headerCarouselImages="headerCarouselImages" />
   <AppMain :borderdImagesLine="borderdImagesLine" />
 </template>
 

@@ -16,8 +16,8 @@ export default {
 </script>
 
 <template>
-  <section :class="{ bordered: hasBorders === true }" class="image-line d-flex">
-    <img v-for="image in images" :src="getImagePath(image.url)" :alt="image.desc">
+  <section :class="{ 'bordered': hasBorders === true }" class="image-line d-flex">
+    <img v-for="image in images" :src="getImagePath(image.url)" :key="image.desc" :alt="image.desc">
   </section>
 </template>
 

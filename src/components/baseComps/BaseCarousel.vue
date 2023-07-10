@@ -1,21 +1,23 @@
 <script>
-
+export default {
+  props: {
+    images: Array
+  },
+  methods: {
+    getImagePath(imageName) {
+      return new URL(`../../assets/img/${imageName}.png`, import.meta.url).href
+    }
+  }
+}
 </script>
 
 <template>
   <div class="carousel carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item d-flex justify-content-center active">
-        <img src="../../assets/img/h3-rev-img-1.png" class="d-block" alt="...">
-        <img src="../../assets/img/h3-rev-img-2.png" class="flux-none d-block" alt="...">
-      </div>
-      <div class="carousel-item d-flex justify-content-center">
-        <img src="../../assets/img/h3-rev-img-3.png" class="d-block" alt="...">
-        <img src="../../assets/img/h3-rev-img-4.png" class="flux-none d-block" alt="...">
-      </div>
-      <div class="carousel-item d-flex justify-content-center">
-        <img src="../../assets/img/h3-rev-img-5.png" class="d-block" alt="...">
-        <img src="../../assets/img/h3-rev-img-6.png" class="flux-none d-block" alt="...">
+      <div v-for="(image, i) in images" :key="image.id" class="carousel-item d-flex justify-content-center"
+        :class="{ 'active': i === 0 }">
+        <img :src="getImagePath(image.bgUrl)" class="d-block" :alt="image.desc">
+        <img :src="getImagePath(image.frontUrl)" class="flux-none d-block" :alt="image.desc">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target=".carousel" data-bs-slide="prev">
