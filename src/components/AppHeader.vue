@@ -5,10 +5,13 @@ export default {
     BaseCarousel,
   },
   props: {
-    headerCarouselImages: Array
+    headerCarouselImages: Array,
+    links: Object
   },
-  created() {
-    console.log(this.headerCarouselImages)
+  methods: {
+    getImagePath(imageName) {
+      return new URL(`../assets/svg/svg-${imageName}.svg`, import.meta.url).href
+    }
   }
 }
 </script>
@@ -20,24 +23,30 @@ export default {
         <button class="btn">ORDER ONLINE</button>
         <div class="central-item d-flex align-items-center">
           <ul class="left-ul">
-            <li>Test</li>
-            <li>Test</li>
-            <li>Test</li>
+            <li v-for="link in links.linksCentralLeft">
+              <img v-if="link.image" :src="getImagePath(link.image)" :alt="link.text">
+              <a :href="link.href">
+                {{ link.text }}
+              </a>
+            </li>
           </ul>
-          <img class="logo" src="../assets/img/h5-logo-divided-header.png" alt="">
+          <img class="logo mx-4" src="../assets/img/h5-logo-divided-header.png" alt="">
           <ul class="right-ul">
-            <li>Test2</li>
-            <li>Test2</li>
-            <li>Test2</li>
+            <li v-for="link in links.linksCentralRight">
+              <img v-if="link.image" :src="getImagePath(link.image)" :alt="link.text">
+              <a :href="link.href">
+                {{ link.text }}
+              </a>
+            </li>
           </ul>
         </div>
         <div class="right-item">
           <ul>
-            <li>
-              test3
-            </li>
-            <li>
-              test3
+            <li v-for="link in links.linksRight">
+              <img v-if="link.image" :src="getImagePath(link.image)" :alt="link.text">
+              <a :href="link.href">
+                {{ link.text }}
+              </a>
             </li>
           </ul>
         </div>
@@ -84,6 +93,13 @@ ul {
 
 ul li {
   margin: 10px 15px 0 15px;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 5px;
+    height: 10px;
+  }
 }
 
 .logo {

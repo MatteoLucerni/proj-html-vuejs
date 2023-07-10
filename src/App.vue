@@ -9,6 +9,54 @@ export default {
   },
   data() {
     return {
+      links: {
+        linksCentralLeft: [
+          {
+            image: '0',
+            text: 'Home',
+            href: '#'
+          },
+          {
+            image: null,
+            text: 'Pages',
+            href: '#'
+          },
+          {
+            image: null,
+            text: 'Menu',
+            href: '#'
+          }
+        ],
+        linksCentralRight: [
+          {
+            image: null,
+            text: 'Event',
+            href: '#'
+          },
+          {
+            image: null,
+            text: 'Blog',
+            href: '#'
+          },
+          {
+            image: null,
+            text: 'Landing',
+            href: '#'
+          }
+        ],
+        linksRight: [
+          {
+            image: '1',
+            text: 'Cart',
+            href: '#'
+          },
+          {
+            image: null,
+            text: 'Search',
+            href: '#'
+          },
+        ],
+      },
       borderdImagesLine: [
         {
           desc: 'New place with a city as background',
@@ -70,7 +118,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader :headerCarouselImages="headerCarouselImages" />
+  <AppHeader :links="links" :headerCarouselImages="headerCarouselImages" />
   <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" />
 </template>
 
