@@ -1,10 +1,22 @@
 <script>
+import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
 
+export default {
+  components: {
+    AppHeader,
+    AppMain
+  },
+  data() {
+    return {
+
+    }
+  }
+}
 </script>
 
 <template>
-  <h1 class="text-success">Ciaoo</h1>
-  <font-awesome-icon :icon="['fas', 'user-secret']" />
+  <AppHeader />
 </template>
 
 <style lang="scss">

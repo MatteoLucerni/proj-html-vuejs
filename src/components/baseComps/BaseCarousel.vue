@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h1 class="text-success">header</h1>
+  <h1 class="text-success">Carousel</h1>
 </template>
 
 <style scoped></style>
