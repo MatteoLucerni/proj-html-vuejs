@@ -11,7 +11,7 @@ export default {
   <header>
     <div class="container">
       <nav class="navbar mb-5">
-        <button class="btn btn-primary">ORDER ONLINE</button>
+        <button class="btn">ORDER ONLINE</button>
         <div class="central-item d-flex align-items-center">
           <ul class="left-ul">
             <li>Test</li>
@@ -42,6 +42,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/sass/vars' as *;
+
 header {
   background-color: black;
   color: white;
@@ -52,6 +54,10 @@ header {
   // taglio la parte alta dello sfondo per rimuovre il simbolo
   padding: 150px 0;
   transform: translateY(-150px);
+
+  button {
+    background-color: $orange;
+  }
 }
 
 ul {

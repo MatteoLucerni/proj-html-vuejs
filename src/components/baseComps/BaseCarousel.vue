@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item d-flex justify-content-center active">
         <img src="../../assets/img/h3-rev-img-1.png" class="d-block" alt="...">
@@ -27,8 +27,10 @@
   </div>
 </template>
 
-<style scoped>
-/* reset dello style */
+<style lang="scss" scoped>
+@use '../../assets/sass/vars' as *;
+
+// reset dello style
 button.carousel-control-prev,
 button.carousel-control-next {
   width: unset;
@@ -38,9 +40,9 @@ button.carousel-control-next {
 .carousel-icon-left,
 .carousel-icon-right {
   border-radius: 50% 50% 0 0;
-  padding: 10px 15px 20px 15px;
+  padding: 10px 15px 25px 15px;
   background-color: #fff;
-  color: red;
+  color: $orange;
   font-weight: 600;
   font-size: 0.7rem;
 }

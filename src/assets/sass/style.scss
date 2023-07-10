@@ -1,4 +1,9 @@
+@use './vars' as *;
 @import 'bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'Oswald Variable', sans-serif;
+}
 
 // generics
 
@@ -11,4 +16,15 @@ ul {
 
 .flux-none {
   position: fixed;
+}
+
+.btn {
+  background-color: $orange;
+  color: white;
+  border-radius: 0;
+  padding: 10px 35px;
+}
+
+.btn:hover {
+  background-color: $dark-orange;
 }
