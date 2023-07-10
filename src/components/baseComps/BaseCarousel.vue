@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="carousel carousel-fade" data-bs-ride="carousel">
+  <div class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item d-flex justify-content-center active">
         <img src="../../assets/img/h3-rev-img-1.png" class="d-block" alt="...">
@@ -43,7 +43,6 @@ button.carousel-control-next {
   color: red;
   font-weight: 600;
   font-size: 0.7rem;
-  margin-bottom: 50px;
 }
 
 .carousel-icon-left {
