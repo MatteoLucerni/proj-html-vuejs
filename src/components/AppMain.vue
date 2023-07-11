@@ -24,7 +24,7 @@ export default {
 <template>
   <main>
     <!-- Linea immagini con bordi -->
-    <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" :hasHover="true" />
+    <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" :hasDotHover="true" />
     <!-- Carosello di stringhe -->
     <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
     <!-- Sezione divisa Specials -->
@@ -62,7 +62,7 @@ export default {
       </template>
     </BaseImageSlider>
     <!-- Linea immagini senza bordi di persone -->
-    <BaseImagesLine :images="imagesLine" :hasHover="true" />
+    <BaseImagesLine :images="imagesLine" :hasSquareHover="true" />
     <!-- Linea immagini senza bordi dei loghi -->
     <div class="container logos">
       <BaseImagesLine :images="logosImagesLine" />
