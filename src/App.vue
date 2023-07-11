@@ -75,6 +75,46 @@ export default {
           url: 'h3-img-4',
         },
       ],
+      imagesLine: [
+        {
+          desc: 'Guy with a hat smiling',
+          url: 'h1-team-1a-700x700',
+        },
+        {
+          desc: 'Girl with blonde hair smiling',
+          url: 'h1-team-2a',
+        },
+        {
+          desc: 'Sitting guy with a hat posing',
+          url: 'h1-team-3a',
+        },
+        {
+          desc: 'Girl with red hair posing',
+          url: 'h1-team-4a',
+        },
+      ],
+      logosImagesLine: [
+        {
+          desc: 'Cowboy Logo',
+          url: 'h1-clients-img-4',
+        },
+        {
+          desc: 'Gordon Pizza Logo',
+          url: 'h1-clients-img-3',
+        },
+        {
+          desc: 'Big Cheese logo',
+          url: 'h1-clients-img-1',
+        },
+        {
+          desc: 'Bludoos Bar logo',
+          url: 'h1-clients-img-2',
+        },
+        {
+          desc: 'Vegan logo',
+          url: 'h1-clients-img-5',
+        },
+      ],
       headerCarouselImages: [
         {
           id: 1,
@@ -158,7 +198,7 @@ export default {
 <template>
   <AppHeader :links="links" :headerCarouselImages="headerCarouselImages" />
   <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" :specials="specials"
-    :bgSlider="bgSlider" />
+    :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" />
 </template>
 
 <style lang="scss">
