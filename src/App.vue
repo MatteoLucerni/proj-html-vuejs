@@ -60,59 +60,59 @@ export default {
       borderdImagesLine: [
         {
           desc: 'New place with a city as background',
-          url: 'h3-img-1',
+          url: 'h3-img-1.jpg',
         },
         {
           desc: 'Mangia una buona pizza',
-          url: 'h3-img-2',
+          url: 'h3-img-2.jpg',
         },
         {
           desc: 'Yum with a man dancing as background',
-          url: 'h3-img-3',
+          url: 'h3-img-3.jpg',
         },
         {
           desc: 'La pizza è più grande di tutti',
-          url: 'h3-img-4',
+          url: 'h3-img-4.jpg',
         },
       ],
       imagesLine: [
         {
           desc: 'Guy with a hat smiling',
-          url: 'h1-team-1a-700x700',
+          url: 'h1-team-1a-700x700.jpg',
         },
         {
           desc: 'Girl with blonde hair smiling',
-          url: 'h1-team-2a',
+          url: 'h1-team-2a.jpg',
         },
         {
           desc: 'Sitting guy with a hat posing',
-          url: 'h1-team-3a',
+          url: 'h1-team-3a.jpg',
         },
         {
           desc: 'Girl with red hair posing',
-          url: 'h1-team-4a',
+          url: 'h1-team-4a.jpg',
         },
       ],
       logosImagesLine: [
         {
           desc: 'Cowboy Logo',
-          url: 'h1-clients-img-4',
+          url: 'h1-clients-img-4.png',
         },
         {
           desc: 'Gordon Pizza Logo',
-          url: 'h1-clients-img-3',
+          url: 'h1-clients-img-3.png',
         },
         {
           desc: 'Big Cheese logo',
-          url: 'h1-clients-img-1',
+          url: 'h1-clients-img-1.png',
         },
         {
           desc: 'Bludoos Bar logo',
-          url: 'h1-clients-img-2',
+          url: 'h1-clients-img-2.png',
         },
         {
           desc: 'Vegan logo',
-          url: 'h1-clients-img-5',
+          url: 'h1-clients-img-5.png',
         },
       ],
       headerCarouselImages: [
