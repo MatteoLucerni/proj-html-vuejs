@@ -6,18 +6,17 @@ export default {
   },
   methods: {
     getImagePath(imageName) {
-      return new URL(`../../assets/img/${imageName}.jpg`, import.meta.url).href
+      return new URL(`../../assets/img/${imageName}`, import.meta.url).href
     }
   },
-  created() {
-    // console.log(this.images)
-  }
 }
 </script>
 
 <template>
   <section :class="{ 'bordered': hasBorders === true }" class="image-line d-flex">
-    <img v-for="image in images" :src="getImagePath(image.url)" :key="image.desc" :alt="image.desc">
+    <!-- width delle immagini in base al numero di esse -->
+    <img :style="{ width: `calc(100 % / ${images.length} - 9px)` }" v-for="image in images" :src="getImagePath(image.url)"
+      :key="image.desc" :alt="image.desc">
   </section>
 </template>
 
@@ -32,7 +31,6 @@ img {
 
   img {
     margin: 0 6px;
-    width: calc(100% / 4 - 9px);
   }
 
   img:first-child {
