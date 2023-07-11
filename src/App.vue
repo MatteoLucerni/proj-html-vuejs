@@ -204,7 +204,9 @@ export default {
 </script>
 
 <template>
+  <!-- header -->
   <AppHeader :links="links" :headerCarouselImages="headerCarouselImages" />
+  <!-- main -->
   <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" :specials="specials"
     :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" />
 </template>
