@@ -32,9 +32,6 @@ export default {
         :alt="image.desc">
       <div class="cover">
         <img src="../../assets/svg/svg-5.svg" alt="eye dot">
-        <div class="square">
-
-        </div>
       </div>
     </div>
   </section>
@@ -71,31 +68,28 @@ img {
 }
 
 .cover {
+  // tolgo dal flusso la cover
   position: absolute;
   top: 0;
   left: 0;
+  // regolo l'opacitàà
   opacity: 0;
   transition: opacity .3s;
+  // dotted background
   background: white;
   background-image: radial-gradient(lightgray 1px, transparent 0);
   background-size: 8px 8px;
   background-position: center;
+  // regolo le dimensioni della cover
   width: 100%;
   height: 100%;
+  // centro il contenuto
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     height: 80px;
-    transform: translate(-50%, -50%);
-
-    &::after {
-      content: "ciao";
-      font-size: 2rem;
-    }
   }
 }
 
