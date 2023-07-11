@@ -14,7 +14,9 @@ export default {
     borderdImagesLine: Array,
     mainCarouselImages: Array,
     specials: Array,
-    bgSlider: String
+    bgSlider: String,
+    imagesLine: Array,
+    logosImagesLine: Array
   },
 }
 </script>
@@ -55,6 +57,10 @@ export default {
         </h1>
       </template>
     </BaseImageSlider>
+    <BaseImagesLine :images="imagesLine" />
+    <div class="container logos">
+      <BaseImagesLine :images="logosImagesLine" />
+    </div>
   </main>
 </template>
 
@@ -67,6 +73,8 @@ export default {
   background-size: cover;
 }
 
+
+// style per la BaseSplitSection
 p {
   color: $lightgray;
   font-weight: 300;
@@ -80,7 +88,13 @@ p {
   padding-top: 5px;
 }
 
+// style per la BaseImageSlider di bgSlider
 .slider-text {
   margin-left: 200px;
+}
+
+// style per la BaseImagesLine di logosImagesLine
+.logos {
+  padding: 60px 0;
 }
 </style>
