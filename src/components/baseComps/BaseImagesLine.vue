@@ -9,14 +9,23 @@ export default {
       return new URL(`../../assets/img/${imageName}`, import.meta.url).href
     }
   },
+  computed: {
+    compensation() {
+      if (this.hasBorders) {
+        return 9
+      } else {
+        return
+      }
+    }
+  }
 }
 </script>
 
 <template>
   <section :class="{ 'bordered': hasBorders === true }" class="image-line d-flex">
     <!-- width delle immagini in base al numero di esse -->
-    <img :style="{ width: `calc(100 % / ${images.length} - 9px)` }" v-for="image in images" :src="getImagePath(image.url)"
-      :key="image.desc" :alt="image.desc">
+    <img :style="{ width: `calc(100% / ${images.length} - ${compensation}px)` }" v-for="image in images"
+      :src="getImagePath(image.url)" :key="image.desc" :alt="image.desc">
   </section>
 </template>
 
