@@ -3,8 +3,8 @@ export default {
   props: {
     images: Array,
     hasBorders: Boolean,
-    hasHover: Boolean
-
+    hasDotHover: Boolean,
+    hasSquareHover: Boolean
   },
   methods: {
     getImagePath(imageName) {
@@ -26,7 +26,7 @@ export default {
 <template>
   <section :class="{ 'bordered': hasBorders }" class="image-line d-flex">
     <!-- width in base al numero di immagini -->
-    <div class="img-cont" :class="{ 'onHover': hasHover, }" v-for="image in images"
+    <div class="img-cont" :class="{ 'onHover': hasDotHover || hasSquareHover }" v-for="image in images"
       :style="{ width: `calc(100% / ${images.length})` }">
       <!-- immagini dinamiche -->
       <img class="image" :class="{ 'img-bordered': hasBorders }" :src="getImagePath(image.url)" :key="image.desc"
@@ -34,9 +34,9 @@ export default {
       <!-- cover quando è in hover -->
       <div class="cover">
         <!-- dot cover -->
-        <img class="d-none" src="../../assets/svg/svg-5.svg" alt="eye dot">
+        <img v-if="hasDotHover" src="../../assets/svg/svg-5.svg" alt="eye dot">
         <!-- square hover con una card -->
-        <div class="square">
+        <div v-if="hasSquareHover" class="square">
           <h5>{{ image.name }}</h5>
           <p>{{ image.job }}</p>
           <div class="icons">
