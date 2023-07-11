@@ -8,7 +8,16 @@ import '@fontsource-variable/oswald';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+// solid icons
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-library.add(faQuoteLeft);
+
+// brand icons
+import {
+  faSquareInstagram,
+  faTwitter,
+  faFacebook,
+} from '@fortawesome/free-brands-svg-icons';
+
+library.add(faQuoteLeft, faSquareInstagram, faTwitter, faFacebook);
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
