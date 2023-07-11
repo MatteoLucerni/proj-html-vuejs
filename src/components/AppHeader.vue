@@ -52,7 +52,7 @@ export default {
         </div>
       </nav>
     </div>
-    <BaseCarousel :carouselId="'header-carousel'" :images="headerCarouselImages" :hasIndicator="false" />
+    <BaseCarousel :carouselId="'header-carousel'" :images="headerCarouselImages" />
   </header>
 </template>
 

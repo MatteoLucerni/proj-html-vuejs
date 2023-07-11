@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    isImageRight: false
+    isImageRight: Boolean
   },
   methods: {
     getImagePath(imageName) {
@@ -13,14 +13,13 @@ export default {
 
 <template>
   <section class="split-section d-flex">
-    <div class="split-item">
-      <img src="../../assets/img/h1-img-4.jpg" alt="">
-      <img src="../../assets/img/h1-img-7n.png" class="flux-none front-image" alt="">
+    <div class="split-item" :class="{ 'order-1': isImageRight === true }">
+      <img :src="getImagePath('h1-img-4.jpg')" alt="">
+      <img :src="getImagePath('h1-img-7n.png')" class="flux-none front-image" alt="">
     </div>
     <div class="split-item">
       <div class="text-container">
-        <h3>Ciao</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, facilis?</p>
+        <slot></slot>
       </div>
     </div>
   </section>
@@ -41,5 +40,9 @@ img {
 
 .front-image {
   height: 300px;
+}
+
+.text-container {
+  max-width: 60%;
 }
 </style>

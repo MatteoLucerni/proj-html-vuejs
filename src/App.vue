@@ -111,7 +111,45 @@ export default {
           content: '“3 Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”',
           subContent: 'Washington post 2018'
         },
-      ]
+      ],
+      sectionsSplit: [
+        {
+          image: 'h1-img-4.jpg',
+          frontImage: 'h1-img-7n.png',
+          desc: 'Women talking in a bar',
+          textBgImage: null
+        },
+        {
+          image: 'h3-img-5a.jpg',
+          frontImage: null,
+          desc: 'Comics pizza',
+          textBgImage: 'cielostellato.PNG'
+        },
+        {
+          image: 'footer-img-1.jpg',
+          frontImage: null,
+          desc: 'Hymans seafood',
+          textBgImage: 'cielostellato.PNG'
+        },
+      ],
+      specials: [
+        {
+          price: 10,
+          name: 'Combo piccolo',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.'
+        },
+        {
+          price: 20,
+          name: 'Combo medio',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.'
+        },
+        {
+          price: 30,
+          name: 'Combo grande',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.'
+        }
+      ],
+      bgSlider: 'h3-background-img.jpg'
     }
   }
 }
@@ -119,7 +157,8 @@ export default {
 
 <template>
   <AppHeader :links="links" :headerCarouselImages="headerCarouselImages" />
-  <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" />
+  <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" :specials="specials"
+    :bgSlider="bgSlider" />
 </template>
 
 <style lang="scss">
