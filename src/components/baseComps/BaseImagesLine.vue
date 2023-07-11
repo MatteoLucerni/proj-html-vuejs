@@ -25,13 +25,17 @@ export default {
 
 <template>
   <section :class="{ 'bordered': hasBorders }" class="image-line d-flex">
-    <!-- width delle immagini in base al numero di esse -->
+    <!-- width in base al numero di immagini -->
     <div class="img-cont" :class="{ 'dotHover': hasDotHover }" v-for="image in images"
       :style="{ width: `calc(100% / ${images.length})` }">
+      <!-- immagini dinamiche -->
       <img class="image" :class="{ 'img-bordered': hasBorders }" :src="getImagePath(image.url)" :key="image.desc"
         :alt="image.desc">
+      <!-- cover quando è in hover -->
       <div class="cover">
+        <!-- dot cover -->
         <img src="../../assets/svg/svg-5.svg" alt="eye dot">
+        <!-- square hover con una card -->
       </div>
     </div>
   </section>
@@ -93,7 +97,7 @@ img {
   }
 }
 
-// stile per l'hover card
+// stile per l'hover square card
 
 .square {
   height: 100px;
