@@ -106,6 +106,7 @@ button.carousel-control-next {
   h3,
   p {
     max-width: 50%;
+    text-align: center;
   }
 }
 </style>

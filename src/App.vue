@@ -98,18 +98,18 @@ export default {
       mainCarouselImages: [
         {
           id: 4,
-          content: '“1 Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”',
+          content: '“Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”',
           subContent: 'Washington post 2018'
         },
         {
           id: 5,
-          content: '“2 Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”',
-          subContent: 'Washington post 2018'
+          content: '“You will try one of the most originals pizzas in all the world”',
+          subContent: 'Time post 2019'
         },
         {
           id: 6,
-          content: '“3 Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples”',
-          subContent: 'Washington post 2018'
+          content: '“The quality is at the top of our interests, you will taste all the best ingedients from Italy ”',
+          subContent: 'News post 2020'
         },
       ],
       sectionsSplit: [
