@@ -3,7 +3,7 @@ export default {
   props: {
     images: Array,
     hasBorders: Boolean,
-    hasDotHover: Boolean
+    hasHover: Boolean
 
   },
   methods: {
@@ -26,7 +26,7 @@ export default {
 <template>
   <section :class="{ 'bordered': hasBorders }" class="image-line d-flex">
     <!-- width in base al numero di immagini -->
-    <div class="img-cont" :class="{ 'dotHover': hasDotHover }" v-for="image in images"
+    <div class="img-cont" :class="{ 'onHover': hasHover, }" v-for="image in images"
       :style="{ width: `calc(100% / ${images.length})` }">
       <!-- immagini dinamiche -->
       <img class="image" :class="{ 'img-bordered': hasBorders }" :src="getImagePath(image.url)" :key="image.desc"
@@ -34,8 +34,24 @@ export default {
       <!-- cover quando è in hover -->
       <div class="cover">
         <!-- dot cover -->
-        <img src="../../assets/svg/svg-5.svg" alt="eye dot">
+        <img class="d-none" src="../../assets/svg/svg-5.svg" alt="eye dot">
         <!-- square hover con una card -->
+        <div class="square">
+          <h5>{{ image.name }}</h5>
+          <p>{{ image.job }}</p>
+          <div class="icons">
+            <a href="#">
+              <font-awesome-icon :icon="['fab', 'square-instagram']" />
+            </a>
+            <a href="#">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+
+            </a>
+            <a href="#">
+              <font-awesome-icon :icon="['fab', 'facebook-f']" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -63,11 +79,11 @@ img {
 }
 
 // stile per l'hover dot
-.img-cont.dotHover:hover .image {
+.img-cont.onHover:hover .image {
   opacity: 0;
 }
 
-.img-cont.dotHover:hover .cover {
+.img-cont.onHover:hover .cover {
   opacity: 1;
 }
 
@@ -100,8 +116,17 @@ img {
 // stile per l'hover square card
 
 .square {
-  height: 100px;
-  width: 100px;
+  height: 80%;
+  width: 80%;
   background-color: #d2401e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  a {
+    margin: 0 5px;
+  }
 }
 </style>
