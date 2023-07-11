@@ -1,10 +1,12 @@
 <script>
 import BaseImagesLine from './baseComps/BaseImagesLine.vue'
 import BaseCarousel from './baseComps/BaseCarousel.vue'
+import BaseSplitSection from './baseComps/BaseSplitSection.vue'
 export default {
   components: {
     BaseImagesLine,
-    BaseCarousel
+    BaseCarousel,
+    BaseSplitSection
   },
   props: {
     borderdImagesLine: Array,
@@ -16,9 +18,8 @@ export default {
 <template>
   <main>
     <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" />
-    <section id="main-carousel">
-      <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
-    </section>
+    <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
+    <BaseSplitSection />
   </main>
 </template>
 
