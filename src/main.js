@@ -15,9 +15,9 @@ import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import {
   faSquareInstagram,
   faTwitter,
-  faFacebook,
+  faFacebookF,
 } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faQuoteLeft, faSquareInstagram, faTwitter, faFacebook);
+library.add(faQuoteLeft, faSquareInstagram, faTwitter, faFacebookF);
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
