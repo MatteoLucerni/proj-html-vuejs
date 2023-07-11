@@ -30,8 +30,11 @@ export default {
       :style="{ width: `calc(100% / ${images.length})` }">
       <img class="image" :class="{ 'img-bordered': hasBorders }" :src="getImagePath(image.url)" :key="image.desc"
         :alt="image.desc">
-      <div class="eye-cover">
+      <div class="cover">
         <img src="../../assets/svg/svg-5.svg" alt="eye dot">
+        <div class="square">
+
+        </div>
       </div>
     </div>
   </section>
@@ -63,11 +66,11 @@ img {
   opacity: 0;
 }
 
-.img-cont.dotHover:hover .eye-cover {
+.img-cont.dotHover:hover .cover {
   opacity: 1;
 }
 
-.eye-cover {
+.cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -97,4 +100,10 @@ img {
 }
 
 // stile per l'hover card
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: #d2401e;
+}
 </style>
