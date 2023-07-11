@@ -77,18 +77,26 @@ export default {
       ],
       imagesLine: [
         {
+          name: 'Peter Anderson',
+          job: 'Head Chef',
           desc: 'Guy with a hat smiling',
           url: 'h1-team-1a-700x700.jpg',
         },
         {
+          name: 'Sharon Hayes',
+          job: 'Executive Chef',
           desc: 'Girl with blonde hair smiling',
           url: 'h1-team-2a.jpg',
         },
         {
+          name: 'Frank Bailay',
+          job: 'Kitchen Porter',
           desc: 'Sitting guy with a hat posing',
           url: 'h1-team-3a.jpg',
         },
         {
+          name: 'Carol Simpson',
+          job: 'Sous Chef',
           desc: 'Girl with red hair posing',
           url: 'h1-team-4a.jpg',
         },
