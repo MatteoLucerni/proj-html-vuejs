@@ -24,7 +24,7 @@ export default {
 <template>
   <main>
     <!-- Linea immagini con bordi -->
-    <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" />
+    <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" :hasDotHover="true" />
     <!-- Carosello di stringhe -->
     <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
     <!-- Sezione divisa Specials -->
