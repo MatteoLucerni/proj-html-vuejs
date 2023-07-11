@@ -23,8 +23,11 @@ export default {
 
 <template>
   <main>
+    <!-- Linea immagini con bordi -->
     <BaseImagesLine :images="borderdImagesLine" :hasBorders="true" />
+    <!-- Carosello di stringhe -->
     <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
+    <!-- Sezione divisa Specials -->
     <BaseSplitSection>
       <template v-slot>
         <div class="text-container">
@@ -46,6 +49,7 @@ export default {
         </div>
       </template>
     </BaseSplitSection>
+    <!-- Slider immagine e go ahead -->
     <BaseImageSlider :image="bgSlider">
       <template v-slot>
         <h1 class="slider-text h-100 text-white d-flex align-items-center">
@@ -57,7 +61,9 @@ export default {
         </h1>
       </template>
     </BaseImageSlider>
+    <!-- Linea immagini senza bordi di persone -->
     <BaseImagesLine :images="imagesLine" />
+    <!-- Linea immagini senza bordi dei loghi -->
     <div class="container logos">
       <BaseImagesLine :images="logosImagesLine" />
     </div>
