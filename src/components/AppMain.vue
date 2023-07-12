@@ -102,7 +102,7 @@ export default {
                 </div>
               </div>
               <div class="info ms-3">
-                <h3>{{ deal.name.toUpperCase() }}</h3>
+                <h4>{{ deal.name.toUpperCase() }}</h4>
                 <p>
                   <font-awesome-icon :icon="['fas', 'location-dot']" />
                   {{ deal.location }}
@@ -158,6 +158,31 @@ p {
   .image-line {
     transform: translateX(-70px);
     gap: 100px;
+  }
+}
+
+// style per la splitSection dei pizza deals
+.pizza-deals-text {
+
+  .date-info {
+    text-align: center;
+  }
+
+  .date-number,
+  p {
+    color: $orange
+  }
+
+  .date-number {
+    font-size: 35px;
+  }
+
+  .date-month {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }
 </style>
