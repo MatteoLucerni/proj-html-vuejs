@@ -84,7 +84,7 @@ export default {
       <BaseImagesLine class="w-110" :images="pizzas" :hasBorders="true" :hasItemsDescription="true" />
     </section>
     <!-- Sezione divisa Pizza Deals -->
-    <BaseSplitSection :isImageRight="true">
+    <BaseSplitSection :isImageRight="true" :hasStarBg="true">
       <template v-slot>
         <div class="pizza-deals-text text-container">
           <p class="m-0">MADE WITH LOVE</p>
@@ -124,7 +124,6 @@ export default {
   background-position: center;
   background-size: cover;
 }
-
 
 // style per la BaseSplitSection
 p {
