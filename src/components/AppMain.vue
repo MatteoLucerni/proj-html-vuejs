@@ -18,7 +18,9 @@ export default {
     imagesLine: Array,
     logosImagesLine: Array,
     pizzas: Array,
-    pizzasDeals: Array
+    pizzasDeals: Array,
+    specialsImages: Object,
+    pizzasDealsImages: Object
   },
 }
 </script>
@@ -30,7 +32,7 @@ export default {
     <!-- Carosello di stringhe -->
     <BaseCarousel :carouselId="'main-carousel'" :strings="mainCarouselImages" :hasIndicator="true" />
     <!-- Sezione divisa Specials -->
-    <BaseSplitSection>
+    <BaseSplitSection :images="specialsImages">
       <template v-slot>
         <div class="text-container">
           <h2>
@@ -84,7 +86,7 @@ export default {
       <BaseImagesLine class="w-110" :images="pizzas" :hasBorders="true" :hasItemsDescription="true" />
     </section>
     <!-- Sezione divisa Pizza Deals -->
-    <BaseSplitSection :isImageRight="true" :hasStarBg="true">
+    <BaseSplitSection :isImageRight="true" :hasStarBg="true" :images="pizzasDealsImages">
       <template v-slot>
         <div class="pizza-deals-text text-container">
           <p class="m-0">MADE WITH LOVE</p>
