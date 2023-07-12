@@ -9,7 +9,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // solid icons
-import { faQuoteLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import {
+  faQuoteLeft,
+  faLocationDot,
+  faUserGroup,
+  faStopwatch,
+} from '@fortawesome/free-solid-svg-icons';
 
 // brand icons
 import {
@@ -23,7 +28,9 @@ library.add(
   faSquareInstagram,
   faTwitter,
   faFacebookF,
-  faLocationDot
+  faLocationDot,
+  faUserGroup,
+  faStopwatch
 );
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
