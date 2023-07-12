@@ -19,8 +19,10 @@ import {
 // brand icons
 import {
   faSquareInstagram,
+  faInstagram,
   faTwitter,
   faFacebookF,
+  faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
@@ -30,7 +32,9 @@ library.add(
   faFacebookF,
   faLocationDot,
   faUserGroup,
-  faStopwatch
+  faStopwatch,
+  faInstagram,
+  faLinkedinIn
 );
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
