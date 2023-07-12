@@ -16,7 +16,8 @@ export default {
     specials: Array,
     bgSlider: String,
     imagesLine: Array,
-    logosImagesLine: Array
+    logosImagesLine: Array,
+    pizzas: Array
   },
 }
 </script>
@@ -70,12 +71,15 @@ export default {
       </div>
     </div>
     <section class="pizza-menu py-5 text-center">
-      <h6 class="text-danger">CHOOSE YOUR FLAVOUR</h6>
-      <h2>THE BEST PIZZA MENU IN TOWN</h2>
-      <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam dolor eos, <br> nobis
-        exercitationem
-        ducimus laudantium!
-      </p>
+      <div class="menu-title mb-5">
+        <h6 class="text-danger">CHOOSE YOUR FLAVOUR</h6>
+        <h2>THE BEST PIZZA MENU IN TOWN</h2>
+        <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam dolor eos, <br> nobis
+          exercitationem
+          ducimus laudantium!
+        </p>
+      </div>
+      <BaseImagesLine class="w-110" :images="pizzas" :hasBorders="true" />
     </section>
   </main>
 </template>
@@ -113,5 +117,15 @@ p {
 .logos {
   padding: 60px 0;
   background-color: $beige;
+}
+
+// style per la BaseImagesLine di pizze
+.pizza-menu {
+  overflow-x: hidden;
+
+  .image-line {
+    transform: translateX(-70px);
+    gap: 100px
+  }
 }
 </style>
