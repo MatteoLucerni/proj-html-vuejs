@@ -1,7 +1,8 @@
 <script>
 export default {
   props: {
-    isImageRight: Boolean
+    isImageRight: Boolean,
+    hasStarBg: Boolean
   },
   methods: {
     getImagePath(imageName) {
@@ -17,7 +18,7 @@ export default {
       <img :src="getImagePath('h1-img-4.jpg')" alt="image item">
       <img :src="getImagePath('h1-img-7n.png')" class="flux-none front-image" alt="image item">
     </div>
-    <div class="split-item text-item">
+    <div class="split-item" :class="{ 'star-bg': hasStarBg }">
       <div class="text-container">
         <slot></slot>
       </div>
@@ -25,7 +26,7 @@ export default {
   </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .split-item {
   width: 50%;
   display: flex;
@@ -44,5 +45,14 @@ img {
 
 .text-container {
   max-width: 60%;
+}
+
+.star-bg {
+  background-image: url('../../assets/img/cielostellato.PNG');
+  background-size: cover;
+
+  * {
+    color: white;
+  }
 }
 </style>
