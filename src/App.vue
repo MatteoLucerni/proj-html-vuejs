@@ -240,7 +240,7 @@ export default {
         },
         {
           date: {
-            number: '02',
+            number: '03',
             month: 'NOV'
           },
           name: 'Traditional Neapolitan Pies In Kyoto Pizza Mercato',
@@ -248,7 +248,7 @@ export default {
         },
         {
           date: {
-            number: '02',
+            number: '05',
             month: 'NOV'
           },
           name: 'Traditional Neapolitan Pies In Kyoto Pizza Mercato',
