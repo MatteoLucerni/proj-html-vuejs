@@ -123,7 +123,7 @@ p {
 // style per la BaseImagesLine di pizze
 .pizza-menu {
   overflow: hidden;
-  padding: 100px 0;
+  padding: 100px 0 150px 0;
 
   .image-line {
     transform: translateX(-70px);
