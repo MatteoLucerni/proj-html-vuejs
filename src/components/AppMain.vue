@@ -82,6 +82,30 @@ export default {
       </div>
       <BaseImagesLine class="w-110" :images="pizzas" :hasBorders="true" :hasItemsDescription="true" />
     </section>
+    <!-- Sezione divisa Pizza Deals -->
+    <BaseSplitSection :isImageRight="true">
+      <template v-slot>
+        <div class="pizza-deals-text text-container">
+          <h2>
+            DELISH PIZZA DEALS
+          </h2>
+          <ul>
+            <li v-for="deal in pizzaDeals" class="d-flex">
+              <div class="date-number fw-bold fs-4">
+                {{ deal.dateNumber }}
+              </div>
+              <div class="info ms-3">
+                <h3>{{ deal.name.toUpperCase() }}</h3>
+                <p>
+                  <font-awesome-icon :icon="['fas', 'location-dot']" />
+                  {{ deal.location }}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </template>
+    </BaseSplitSection>
   </main>
 </template>
 
