@@ -3,12 +3,14 @@ import BaseImagesLine from './baseComps/BaseImagesLine.vue'
 import BaseCarousel from './baseComps/BaseCarousel.vue'
 import BaseSplitSection from './baseComps/BaseSplitSection.vue'
 import BaseImageSlider from './baseComps/BaseImageSlider.vue'
+import AppForm from './AppFrom.vue'
 export default {
   components: {
     BaseImagesLine,
     BaseCarousel,
     BaseSplitSection,
-    BaseImageSlider
+    BaseImageSlider,
+    AppForm
   },
   props: {
     borderdImagesLine: Array,
@@ -115,6 +117,8 @@ export default {
         </div>
       </template>
     </BaseSplitSection>
+    <!-- form -->
+    <AppForm />
   </main>
 </template>
 
