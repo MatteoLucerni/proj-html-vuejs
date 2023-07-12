@@ -64,9 +64,19 @@ export default {
     <!-- Linea immagini senza bordi di persone -->
     <BaseImagesLine :images="imagesLine" :hasSquareHover="true" />
     <!-- Linea immagini senza bordi dei loghi -->
-    <div class="container logos">
-      <BaseImagesLine :images="logosImagesLine" />
+    <div class="logo-list logos">
+      <div class="container">
+        <BaseImagesLine :images="logosImagesLine" />
+      </div>
     </div>
+    <section class="pizza-menu py-5 text-center">
+      <h6 class="text-danger">CHOOSE YOUR FLAVOUR</h6>
+      <h2>THE BEST PIZZA MENU IN TOWN</h2>
+      <p class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam dolor eos, <br> nobis
+        exercitationem
+        ducimus laudantium!
+      </p>
+    </section>
   </main>
 </template>
 
@@ -99,8 +109,9 @@ p {
   margin-left: 200px;
 }
 
-// style per la BaseImagesLine di logosImagesLine
+// style per la BaseImagesLine di logo
 .logos {
   padding: 60px 0;
+  background-color: $beige;
 }
 </style>
