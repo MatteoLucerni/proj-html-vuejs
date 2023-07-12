@@ -267,7 +267,40 @@ export default {
         frontImage: null,
         bgImage: 'h3-img-5a.jpg'
       },
+      footerImages:
+      {
+        frontImage: null,
+        bgImage: 'footer-img-1.jpg'
+      },
+      footerInfos: {
+        resturants: [
+          '1614 E. Bell Rd #104. Salerno, AZ 85022 (602) 867 - 1010',
+          '204 E. Pizzetta Tommaso Sorrento, AZ 85022 (358) 867 - 1010',
+          'Vale Puglia 54 Torre Del Greco AZ 85022 (359) 867-1010',
+          'Corso Itali AA Naples, AZ 85022 (989) 867-1010'
+        ],
+        workingHours: [
+          {
+            title: 'MONDAY',
+            desc: 'Kitchen Closed'
+          },
+          {
+            title: 'TUSEDAY UNTIL FIDAY',
+            desc: '9:00 - 22:00'
+          },
+          {
+            title: 'SATURDAY',
+            desc: 'Saturday 11am to midnight'
+          },
+          {
+            title: 'SUNDAY',
+            desc: '9:00 - 22:00'
+          },
+
+        ]
+      },
       bgSlider: 'h3-background-img.jpg'
+
     }
   }
 }
@@ -281,7 +314,7 @@ export default {
     :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" :pizzas="pizzas"
     :pizzasDeals="pizzasDeals" :specialsImages="specialsImages" :pizzasDealsImages="pizzasDealsImages" />
   <!-- footer -->
-  <AppFooter />
+  <AppFooter :footerImages="footerImages" :footerInfos="footerInfos" />
 </template>
 
 <style lang="scss">
