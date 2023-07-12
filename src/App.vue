@@ -197,6 +197,38 @@ export default {
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam dui.'
         }
       ],
+      pizzas: [
+        {
+          name: 'BISMARK',
+          price: '$30.00',
+          image: 'h3-product-img-1a-100x100.png'
+        },
+        {
+          name: 'FIORI DI ZUCCA',
+          price: '$7.00 - $50.00',
+          image: 'h3-product-img-2a-150X150.png'
+        },
+        {
+          name: 'VALDOSTANA',
+          price: '$55.00',
+          image: 'h3-product-img-3a-150X150.png'
+        },
+        {
+          name: 'PIZZA TARTUFATA',
+          price: '$45.00',
+          image: 'h3-product-img-4a-150X150.png'
+        },
+        {
+          name: 'FRANCESCANA',
+          price: '$25.00',
+          image: 'h3-product-img-5a-150X150.png'
+        },
+        {
+          name: 'CAMPAGNOLA',
+          price: '$50.00 - $95.00',
+          image: 'h3-product-img-6a-100x100.png'
+        },
+      ],
       bgSlider: 'h3-background-img.jpg'
     }
   }
