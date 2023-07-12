@@ -4,7 +4,8 @@ export default {
     images: Array,
     hasBorders: Boolean,
     hasDotHover: Boolean,
-    hasSquareHover: Boolean
+    hasSquareHover: Boolean,
+    hasItemsDescription: Boolean
   },
   methods: {
     getImagePath(imageName) {
@@ -31,6 +32,10 @@ export default {
       <!-- immagini dinamiche -->
       <img class="image" :class="{ 'img-bordered': hasBorders }" :src="getImagePath(image.url)" :key="image.desc"
         :alt="image.desc">
+      <div v-if="hasItemsDescription === true" class="descripion mt-3 py-2">
+        <h6>{{ image.name }}</h6>
+        <p>{{ image.price }}</p>
+      </div>
       <!-- cover quando è in hover -->
       <div class="cover">
         <!-- dot cover -->
@@ -40,16 +45,9 @@ export default {
           <h5>{{ image.name }}</h5>
           <p>{{ image.job }}</p>
           <div class="icons">
-            <a href="#">
-              <font-awesome-icon :icon="['fab', 'square-instagram']" />
-            </a>
-            <a href="#">
-              <font-awesome-icon :icon="['fab', 'twitter']" />
-
-            </a>
-            <a href="#">
-              <font-awesome-icon :icon="['fab', 'facebook-f']" />
-            </a>
+            <a href="#"><font-awesome-icon :icon="['fab', 'square-instagram']" /></a>
+            <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+            <a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
           </div>
         </div>
       </div>
@@ -78,7 +76,7 @@ img {
   position: relative;
 }
 
-// stile per l'hover dot
+// stile per l'hover
 .img-cont.onHover:hover .image {
   opacity: 0;
 }
@@ -114,7 +112,6 @@ img {
 }
 
 // stile per l'hover square card
-
 .square {
   height: 85%;
   width: 85%;
@@ -127,6 +124,23 @@ img {
 
   a {
     margin: 0 5px;
+  }
+}
+
+// style for description
+.descripion {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  h6 {
+    color: #b7903c;
+  }
+
+  p {
+    color: #d2401e;
+    font-weight: 600;
   }
 }
 </style>

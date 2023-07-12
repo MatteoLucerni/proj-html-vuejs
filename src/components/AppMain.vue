@@ -71,7 +71,7 @@ export default {
       </div>
     </div>
     <!-- Linea di immagini delle pizze -->
-    <section class="pizza-menu py-5 text-center">
+    <section class="pizza-menu text-center">
       <div class="menu-title mb-5">
         <h6 class="text-danger">CHOOSE YOUR FLAVOUR</h6>
         <h2>THE BEST PIZZA MENU IN TOWN</h2>
@@ -80,7 +80,7 @@ export default {
           ducimus laudantium!
         </p>
       </div>
-      <BaseImagesLine class="w-110" :images="pizzas" :hasBorders="true" />
+      <BaseImagesLine class="w-110" :images="pizzas" :hasBorders="true" :hasItemsDescription="true" />
     </section>
   </main>
 </template>
@@ -122,11 +122,12 @@ p {
 
 // style per la BaseImagesLine di pizze
 .pizza-menu {
-  overflow-x: hidden;
+  overflow: hidden;
+  padding: 100px 0;
 
   .image-line {
     transform: translateX(-70px);
-    gap: 100px
+    gap: 100px;
   }
 }
 </style>
