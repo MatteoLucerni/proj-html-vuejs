@@ -70,6 +70,7 @@ export default {
         <BaseImagesLine :images="logosImagesLine" />
       </div>
     </div>
+    <!-- Linea di immagini delle pizze -->
     <section class="pizza-menu py-5 text-center">
       <div class="menu-title mb-5">
         <h6 class="text-danger">CHOOSE YOUR FLAVOUR</h6>
