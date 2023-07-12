@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   components: {
     AppHeader,
-    AppMain
+    AppMain,
+    AppFooter
   },
   data() {
     return {
@@ -278,6 +280,8 @@ export default {
   <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" :specials="specials"
     :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" :pizzas="pizzas"
     :pizzasDeals="pizzasDeals" :specialsImages="specialsImages" :pizzasDealsImages="pizzasDealsImages" />
+  <!-- footer -->
+  <AppFooter />
 </template>
 
 <style lang="scss">
