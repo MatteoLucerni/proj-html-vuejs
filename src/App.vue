@@ -229,6 +229,32 @@ export default {
           url: 'h3-product-img-6a-100x100.png'
         },
       ],
+      pizzasDeals: [
+        {
+          date: {
+            number: '02',
+            month: 'NOV'
+          },
+          name: 'Traditional Neapolitan Pies In Kyoto Pizza Mercato',
+          location: '204 E. Pizzetta Tommaso'
+        },
+        {
+          date: {
+            number: '02',
+            month: 'NOV'
+          },
+          name: 'Traditional Neapolitan Pies In Kyoto Pizza Mercato',
+          location: '204 E. Pizzetta Tommaso'
+        },
+        {
+          date: {
+            number: '02',
+            month: 'NOV'
+          },
+          name: 'Traditional Neapolitan Pies In Kyoto Pizza Mercato',
+          location: '204 E. Pizzetta Tommaso'
+        },
+      ],
       bgSlider: 'h3-background-img.jpg'
     }
   }
@@ -240,7 +266,8 @@ export default {
   <AppHeader :links="links" :headerCarouselImages="headerCarouselImages" />
   <!-- main -->
   <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" :specials="specials"
-    :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" :pizzas="pizzas" />
+    :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" :pizzas="pizzas"
+    :pizzasDeals="pizzasDeals" />
 </template>
 
 <style lang="scss">
