@@ -87,7 +87,8 @@ export default {
     <BaseSplitSection :isImageRight="true">
       <template v-slot>
         <div class="pizza-deals-text text-container">
-          <h2>
+          <p class="m-0">MADE WITH LOVE</p>
+          <h2 class="mb-5">
             DELISH PIZZA DEALS
           </h2>
           <ul>

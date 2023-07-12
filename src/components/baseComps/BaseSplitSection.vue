@@ -17,7 +17,7 @@ export default {
       <img :src="getImagePath('h1-img-4.jpg')" alt="image item">
       <img :src="getImagePath('h1-img-7n.png')" class="flux-none front-image" alt="image item">
     </div>
-    <div class="split-item">
+    <div class="split-item text-item">
       <div class="text-container">
         <slot></slot>
       </div>
