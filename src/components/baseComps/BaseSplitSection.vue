@@ -37,6 +37,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 img {
@@ -48,7 +49,7 @@ img {
 }
 
 .text-container {
-  max-width: 60%;
+  max-width: 85%;
 }
 
 .star-bg {
