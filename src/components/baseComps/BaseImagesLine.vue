@@ -116,8 +116,8 @@ img {
 // stile per l'hover square card
 
 .square {
-  height: 80%;
-  width: 80%;
+  height: 85%;
+  width: 85%;
   background-color: #d2401e;
   display: flex;
   flex-direction: column;
