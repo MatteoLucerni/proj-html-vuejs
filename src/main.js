@@ -16,6 +16,9 @@ import {
   faStopwatch,
 } from '@fortawesome/free-solid-svg-icons';
 
+// regualr icons
+import { faEye } from '@fortawesome/free-regular-svg-icons';
+
 // brand icons
 import {
   faSquareInstagram,
@@ -34,7 +37,8 @@ library.add(
   faUserGroup,
   faStopwatch,
   faInstagram,
-  faLinkedinIn
+  faLinkedinIn,
+  faEye
 );
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
