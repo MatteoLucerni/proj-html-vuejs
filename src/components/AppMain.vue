@@ -17,7 +17,8 @@ export default {
     bgSlider: String,
     imagesLine: Array,
     logosImagesLine: Array,
-    pizzas: Array
+    pizzas: Array,
+    pizzasDeals: Array
   },
 }
 </script>
@@ -90,9 +91,14 @@ export default {
             DELISH PIZZA DEALS
           </h2>
           <ul>
-            <li v-for="deal in pizzaDeals" class="d-flex">
-              <div class="date-number fw-bold fs-4">
-                {{ deal.dateNumber }}
+            <li v-for="deal in pizzasDeals" class="d-flex">
+              <div class="date-info fw-bold fs-4">
+                <div class="date-number">
+                  {{ deal.date.number }}
+                </div>
+                <div class="date-month">
+                  {{ deal.date.month }}
+                </div>
               </div>
               <div class="info ms-3">
                 <h3>{{ deal.name.toUpperCase() }}</h3>
