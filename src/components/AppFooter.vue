@@ -48,6 +48,8 @@ export default {
                             </h5>
                             <font-awesome-icon class="follow-icon" :icon="['fab', 'twitter']" />
                             <font-awesome-icon class="follow-icon" :icon="['fab', 'facebook-f']" />
+                            <font-awesome-icon class="follow-icon" :icon="['fab', 'instagram']" />
+                            <font-awesome-icon class="follow-icon" :icon="['fab', 'linkedin-in']" />
                         </div>
                     </div>
                     <div class="col-4">
