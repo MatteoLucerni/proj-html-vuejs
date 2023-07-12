@@ -14,8 +14,8 @@ export default {
 <template>
   <section class="split-section d-flex">
     <div class="split-item" :class="{ 'order-1': isImageRight === true }">
-      <img :src="getImagePath('h1-img-4.jpg')" alt="">
-      <img :src="getImagePath('h1-img-7n.png')" class="flux-none front-image" alt="">
+      <img :src="getImagePath('h1-img-4.jpg')" alt="image item">
+      <img :src="getImagePath('h1-img-7n.png')" class="flux-none front-image" alt="image item">
     </div>
     <div class="split-item">
       <div class="text-container">
