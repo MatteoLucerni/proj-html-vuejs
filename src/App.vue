@@ -255,6 +255,16 @@ export default {
           location: '204 E. Pizzetta Tommaso'
         },
       ],
+      specialsImages:
+      {
+        frontImage: 'h1-img-7n.png',
+        bgImage: 'h1-img-4.jpg'
+      },
+      pizzasDealsImages:
+      {
+        frontImage: null,
+        bgImage: 'h3-img-5a.jpg'
+      },
       bgSlider: 'h3-background-img.jpg'
     }
   }
@@ -267,7 +277,7 @@ export default {
   <!-- main -->
   <AppMain :borderdImagesLine="borderdImagesLine" :mainCarouselImages="mainCarouselImages" :specials="specials"
     :bgSlider="bgSlider" :imagesLine="imagesLine" :logosImagesLine="logosImagesLine" :pizzas="pizzas"
-    :pizzasDeals="pizzasDeals" />
+    :pizzasDeals="pizzasDeals" :specialsImages="specialsImages" :pizzasDealsImages="pizzasDealsImages" />
 </template>
 
 <style lang="scss">
