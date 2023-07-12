@@ -2,12 +2,16 @@
 export default {
   props: {
     isImageRight: Boolean,
-    hasStarBg: Boolean
+    hasStarBg: Boolean,
+    images: Object
   },
   methods: {
     getImagePath(imageName) {
       return new URL(`../../assets/img/${imageName}`, import.meta.url).href
     }
+  },
+  created() {
+    console.table(this.images)
   }
 }
 </script>
@@ -15,8 +19,8 @@ export default {
 <template>
   <section class="split-section d-flex">
     <div class="split-item" :class="{ 'order-1': isImageRight === true }">
-      <img :src="getImagePath('h1-img-4.jpg')" alt="image item">
-      <img :src="getImagePath('h1-img-7n.png')" class="flux-none front-image" alt="image item">
+      <img :src="getImagePath(images.bgImage)" alt="image item">
+      <img :src="getImagePath(images.frontImage)" class="flux-none front-image" alt="image item">
     </div>
     <div class="split-item" :class="{ 'star-bg': hasStarBg }">
       <div class="text-container">
