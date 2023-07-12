@@ -40,6 +40,7 @@ export default {
       <div class="cover">
         <!-- dot cover -->
         <img v-if="hasDotHover" src="../../assets/svg/svg-5.svg" alt="eye dot">
+        <font-awesome-icon v-if="hasDotHover" class="eye-icon" :icon="['far', 'eye']" />
         <!-- square hover con una card -->
         <div v-if="hasSquareHover" class="square">
           <h5>{{ image.name }}</h5>
@@ -108,6 +109,15 @@ img {
 
   img {
     height: 80px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .eye-icon {
+    position: absolute;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
   }
 }
 
