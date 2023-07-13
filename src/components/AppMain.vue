@@ -96,22 +96,25 @@ export default {
             DELISH PIZZA DEALS
           </h2>
           <ul>
-            <li v-for="deal in pizzasDeals" class="d-flex">
-              <div class="date-info fw-bold fs-4">
-                <div class="date-number">
-                  {{ deal.date.number }}
+            <li v-for="deal in pizzasDeals">
+              <div class="d-flex">
+                <div class="date-info fw-bold fs-4">
+                  <div class="date-number">
+                    {{ deal.date.number }}
+                  </div>
+                  <div class="date-month">
+                    {{ deal.date.month }}
+                  </div>
                 </div>
-                <div class="date-month">
-                  {{ deal.date.month }}
+                <div class="info ms-3">
+                  <h4>{{ deal.name.toUpperCase() }}</h4>
+                  <p>
+                    <font-awesome-icon :icon="['fas', 'location-dot']" />
+                    {{ deal.location }}
+                  </p>
                 </div>
               </div>
-              <div class="info ms-3">
-                <h4>{{ deal.name.toUpperCase() }}</h4>
-                <p>
-                  <font-awesome-icon :icon="['fas', 'location-dot']" />
-                  {{ deal.location }}
-                </p>
-              </div>
+              <div class="dashed-separator"></div>
             </li>
           </ul>
         </div>

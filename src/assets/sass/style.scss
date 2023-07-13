@@ -43,3 +43,10 @@ a {
 .w-110 {
   width: 110%;
 }
+
+.dashed-separator {
+  height: 2px;
+  border-top: 2px dashed $gold;
+  width: 100%;
+  margin: 15px 0;
+}
